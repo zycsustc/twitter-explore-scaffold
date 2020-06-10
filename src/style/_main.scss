@@ -1,0 +1,56 @@
+@import "variables";
+@import "mixins";
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+
+  > .login-box {
+    border: $color-base 1px solid;
+    width: $content-width;
+    height: $content-height;
+    border-radius: 10px 10px;
+
+    > h2 {
+      color: white;
+      display: flex;
+      justify-content: center;
+    }
+
+    > .account-hint,
+    .account,
+    .password-hint,
+    .password {
+      margin-left: 50px;
+      color: lightgray;
+    }
+
+    > .password-forget {
+      margin-left: 50px;
+      color: $primary-color;
+    }
+
+    > .account,
+    .password {
+      @include input-variant($body-bg, $color-base);
+    }
+
+    > .login-btn {
+      margin-left: ($content-width - $main-button-width)/2;
+      @include btn-variant($primary-color, $body-bg, $main-button-width);
+    }
+
+    > .register-btn {
+      margin-left: ($content-width - $main-button-width)/2;
+      @include btn-variant(white, $primary-color, $main-button-width);
+    }
+
+    .orElse {
+      display: flex;
+      justify-content: center;
+      color: lightgray;
+    }
+  }
+}

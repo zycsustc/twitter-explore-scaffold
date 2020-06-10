@@ -1,4 +1,29 @@
+@import "variables";
+
 @mixin heading($font-size) {
   margin-top: 0;
   font-size: $font-size;
+}
+
+@mixin btn-variant($color, $bg-color, $width) {
+  color: $color;
+  border: $primary-color solid 1px;
+  background-color: $bg-color;
+  width: $width;
+  border-radius: 80px;
+  height: 40px;
+  outline: none;
+
+  &:hover {
+    background-color: darken($bg-color, 15%);
+  }
+}
+
+@mixin input-variant($bg-color, $border-color) {
+  background-color: $bg-color;
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-color: $border-color;
+  width: 300px;
+  outline: none;
 }

@@ -1,0 +1,19 @@
+@import "variables";
+@import "mixins";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  border-bottom: $color-base 1px solid;
+
+  nav {
+    > .btn-header-login {
+      @include btn-variant($primary-color, $body-bg, 100px);
+    }
+    .btn-header-register {
+      @include btn-variant(white, $primary-color, 100px);
+    }
+  }
+}
